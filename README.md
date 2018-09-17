@@ -1,23 +1,21 @@
 # EasySSO
-EasySSO is a simple, but nonetheless efficient go package to integrate a Single Sign-On in 
-your application. EasySSO is compose of the following projects:
-* [easy-sso-common](https://bitbucket.org/twuillemin/easy-sso-common): the common definition and structures that 
-your currently browsing. This project Holds the common definition of the various projects.
-* [easy-sso](https://bitbucket.org/twuillemin/easy-sso): the SSO server component that your currently browsing.
- Along with the server this project also include components for services (validating the query) and client (
- authenticating and connecting to the services). These components only rely on the Go default http.
-* [easy-sso-mux](https://bitbucket.org/twuillemin/easy-sso-mux): a middleware for the [gorilla/mux](https://github.com/gorilla/mux)
-router, validating client authentication.
+EasySSO is a simple, but nonetheless efficient go package to integrate a Single Sign-On in your application. EasySSO is compose of the following projects:
+
+ * [easy-sso-common](https://bitbucket.org/twuillemin/easy-sso-common): the common definition and structures that your currently browsing. This project Holds the common definition of the various projects.
+ * [easy-sso](https://bitbucket.org/twuillemin/easy-sso): the SSO server component. Along with the server this project also include components for services (validating the query) and client (authenticating and connecting to the services). These components only rely on the Go default http.
+ * [easy-sso-mux](https://bitbucket.org/twuillemin/easy-sso-mux): a middleware for the [gorilla/mux](https://github.com/gorilla/mux) router, validating client authentication.
+
 
 # EasySSO Common
 This package is a very simple just targeted at holding together the various common definitions for the sub-projects. The
 main definitions are:
+
 * errors: The various errors that could be returned by the components of EasySSO, such as `ErrUnauthorized`
 * structures: The definitions of common structures or DTOs, such as:
-  *  TokenRequestBody: The body of the request for getting a token
-  *  TokenRefreshBody: The body of the request for refreshing a token
-  *  AuthenticationResponse: The response of the server with the token information
-  *  CustomClaims: The specific claims in the JWT token
+    *  TokenRequestBody: The body of the request for getting a token
+    *  TokenRefreshBody: The body of the request for refreshing a token
+    *  AuthenticationResponse: The response of the server with the token information
+    *  CustomClaims: The specific claims in the JWT token
   
 This package is targeted at only retrieving the minimal dependencies. So for example the use of the [easy-sso-mux](https://bitbucket.org/twuillemin/easy-sso-mux)
 package won't impose having all the dependencies from the server. So you will probably never have to include this
@@ -26,11 +24,15 @@ package directly by itself.
 Boring... For real code, please check the [EasySSO](https://bitbucket.org/twuillemin/easy-sso) main project page
 
 #Usage
-Very hard: 
+Just import the package 
 
-    import (
-        "bitbucket.org/twuillemin/easy-sso-common/pkg/common"
-    )
+Example:
+
+```go
+import (
+  "bitbucket.org/twuillemin/easy-sso-common/pkg/common"
+)
+```
     
 Woah!
 
