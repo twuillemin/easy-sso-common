@@ -23,6 +23,11 @@ package directly by itself.
   
 Boring... For real code, please check the [EasySSO](https://bitbucket.org/twuillemin/easy-sso) main project page
 
+# EasySSO function
+The only function defined in the common package is `GetAuthenticationFromRequest` which is used by the various 
+other libraries. This function allows to retrieve and validate the authentication information from a standard
+GO HTTP request.
+
 #Usage
 Just import the package 
 

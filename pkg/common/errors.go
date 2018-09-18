@@ -14,4 +14,5 @@ var (
 	ErrTokenMalformed          = errors.New("the token in the HTTP query is too malformed")
 	ErrTokenTooOld             = errors.New("the token in the HTTP query is too old")
 	ErrEmptyResponseFromServer = errors.New("the response from the server was empty")
+	ErrBadParameters           = errors.New("a function was called with invalid parameters")
 )

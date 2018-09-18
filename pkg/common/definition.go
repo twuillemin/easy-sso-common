@@ -30,3 +30,10 @@ type CustomClaims struct {
 	Roles []string `json:"roles"`
 	jwt.StandardClaims
 }
+
+// AuthenticationInformation holds all the information extracted from an HTTP query
+type AuthenticationInformation struct {
+	User  string
+	Roles []string
+	Token string
+}
