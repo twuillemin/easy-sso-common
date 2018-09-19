@@ -4,6 +4,7 @@ EasySSO is a simple, but nonetheless efficient go package to integrate a Single 
  * [easy-sso-common](https://bitbucket.org/twuillemin/easy-sso-common): the common definition and structures that your currently browsing. This project Holds the common definition of the various projects.
  * [easy-sso](https://bitbucket.org/twuillemin/easy-sso): the SSO server component. Along with the server this project also include components for services (validating the query) and client (authenticating and connecting to the services). These components only rely on the Go default http.
  * [easy-sso-mux](https://bitbucket.org/twuillemin/easy-sso-mux): a middleware for the [gorilla/mux](https://github.com/gorilla/mux) router, validating client authentication.
+ * [easy-sso-negroni](https://bitbucket.org/twuillemin/easy-sso-negroni): a middleware for the [Negroni](https://github.com/urfave/negroni) web middleware, validating client authentication.
 
 
 # EasySSO Common
@@ -42,14 +43,14 @@ import (
 Woah!
 
 # License
-
-Copyright 2018 Thomas Wuillemin
+Copyright 2018 Thomas Wuillemin  <thomas.wuillemin@gmail.com>
 
 Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
+you may not use this project or its content except in compliance with the License.
 You may obtain a copy of the License at
 
 http://www.apache.org/licenses/LICENSE-2.0
+
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
