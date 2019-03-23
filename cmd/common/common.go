@@ -1,8 +1,8 @@
 package main
 
 import (
-	"bitbucket.org/twuillemin/easy-sso-common/pkg/common"
 	"fmt"
+	"github.com/twuillemin/easy-sso-common/pkg/common"
 )
 
 // A dummy package so that Err* are not reported as unused

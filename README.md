@@ -1,10 +1,10 @@
 # EasySSO
 EasySSO is a simple, but nonetheless efficient go package to integrate a Single Sign-On in your application. EasySSO is compose of the following projects:
 
- * [easy-sso-common](https://bitbucket.org/twuillemin/easy-sso-common): the common definition and structures that your currently browsing. This project Holds the common definition of the various projects.
- * [easy-sso](https://bitbucket.org/twuillemin/easy-sso): the SSO server component. Along with the server this project also include components for services (validating the query) and client (authenticating and connecting to the services). These components only rely on the Go default http.
- * [easy-sso-mux](https://bitbucket.org/twuillemin/easy-sso-mux): a middleware for the [gorilla/mux](https://github.com/gorilla/mux) router, validating client authentication.
- * [easy-sso-negroni](https://bitbucket.org/twuillemin/easy-sso-negroni): a middleware for the [Negroni](https://github.com/urfave/negroni) web middleware, validating client authentication.
+ * [easy-sso-common](https://github.com/twuillemin/easy-sso-common): the common definition and structures that your currently browsing. This project Holds the common definition of the various projects.
+ * [easy-sso](https://github.com/twuillemin/easy-sso): the SSO server component. Along with the server this project also include components for services (validating the query) and client (authenticating and connecting to the services). These components only rely on the Go default http.
+ * [easy-sso-mux](https://github.com/twuillemin/easy-sso-mux): a middleware for the [gorilla/mux](https://github.com/gorilla/mux) router, validating client authentication.
+ * [easy-sso-negroni](https://github.com/twuillemin/easy-sso-negroni): a middleware for the [Negroni](https://github.com/urfave/negroni) web middleware, validating client authentication.
 
 
 # EasySSO Common
@@ -18,25 +18,25 @@ main definitions are:
     *  AuthenticationResponse: The response of the server with the token information
     *  CustomClaims: The specific claims in the JWT token
   
-This package is targeted at only retrieving the minimal dependencies. So for example the use of the [easy-sso-mux](https://bitbucket.org/twuillemin/easy-sso-mux)
+This package is targeted at only retrieving the minimal dependencies. So for example the use of the [easy-sso-mux](https://github.com/twuillemin/easy-sso-mux)
 package won't impose having all the dependencies from the server. So you will probably never have to include this
 package directly by itself.
   
-Boring... For real code, please check the [EasySSO](https://bitbucket.org/twuillemin/easy-sso) main project page
+Boring... For real code, please check the [EasySSO](https://github.com/twuillemin/easy-sso) main project page
 
 # EasySSO function
 The only function defined in the common package is `GetAuthenticationFromRequest` which is used by the various 
 other libraries. This function allows to retrieve and validate the authentication information from a standard
 GO HTTP request.
 
-#Usage
+# Usage
 Just import the package 
 
 Example:
 
 ```go
 import (
-  "bitbucket.org/twuillemin/easy-sso-common/pkg/common"
+  "github.com/twuillemin/easy-sso-common/pkg/common"
 )
 ```
     
